@@ -28,13 +28,13 @@ import pymongo
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import ChannelBanned, ChannelInvalid, ChannelPrivate, ChatIdInvalid, ChatInvalid
 from pyrogram.enums import MessageMediaType, ParseMode
-from devgagan.core.func import *
+from Teamjb.core.func import *
 from pyrogram.errors import RPCError
 from pyrogram.types import Message
 from config import MONGO_DB as MONGODB_CONNECTION_STRING, LOG_GROUP, OWNER_ID, STRING, API_ID, API_HASH
-from devgagan.core.mongo import db as odb
+from Teamjb.core.mongo import db as odb
 from telethon import TelegramClient, events, Button
-from devgagantools import fast_upload
+from Teamjbtools import fast_upload
 
 def thumbnail(sender):
     return f'{sender}.jpg' if os.path.exists(f'{sender}.jpg') else None
@@ -52,7 +52,7 @@ collection = db[COLLECTION_NAME]
 
 if STRING:
     from devgagan import pro
-    print("App imported from devgagan.")
+    print("App imported from Teamjb.")
 else:
     pro = None
     print("STRING is not available. 'app' is set to None.")
